@@ -26,5 +26,5 @@ def fillList():
 def randomOccupation():
 	return random.choice(occupationList)
 				
-#fillList()
-#print(randomOccupation())
+fillList()
+print(randomOccupation())
