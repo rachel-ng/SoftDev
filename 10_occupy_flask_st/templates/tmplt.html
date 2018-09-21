@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <style>
+      table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      }
+      td {
+      padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <h3>{{ randomOccupation }}</h3>
+    <br>
+    <table>
+      {% for key, value in dict.items() %}
+      <tr><td>{{ key|e }}</td><td>{{ value|e }}</td></tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
