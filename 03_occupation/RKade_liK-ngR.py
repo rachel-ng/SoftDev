@@ -9,7 +9,7 @@ occupationList = []
 
 def fillList():
 	#reads csv file
-	csvFileObject = open( 'occupations.csv', 'rb')
+	csvFileObject = open( 'occupations.csv', 'r')
 	dictionaryReader = csv.DictReader( csvFileObject)
 	
 	#looks at each row except for the last
