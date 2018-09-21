@@ -1,4 +1,4 @@
-# SoftDev
+# softdev
 
 [stuy-softdev group](https://github.com/stuy-softdev)  
 [the workshop](https://github.com/stuy-softdev/workshop)  
