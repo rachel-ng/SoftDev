@@ -12,7 +12,8 @@ app = Flask(__name__)  # create instance of class Flask
 # this function is not assigned to a route!
 # returns a dictionary with occupation data
 def csvToDict():
-    occupations = {}  # prepare dict for occupation data 
+    occupations = {}  # prepare dict for occupation data
+    links = {}
     csvFileObject = open('./data/occupations.csv', 'r')  # open the csv file object in 'read' mode
     readerObject = reader(csvFileObject)  # read the records in the csv
 
@@ -23,9 +24,11 @@ def csvToDict():
         # record[0] is the occupation string, record[1] is the floating point (as a string)
         # must convert the appropriate string into floating point before placing as value in dict
         else:
-            occupations[ record[0] ] = float(record[1])
+            occupations[ record[0] ] = float(record[1]),record[2]
+            #links[ record[0] ] = record[2]
             
     csvFileObject.close()
+    print (occupations)
     return occupations
 
 # this function is assigned to a route...
