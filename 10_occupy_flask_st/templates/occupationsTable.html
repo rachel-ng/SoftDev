@@ -8,7 +8,7 @@
 
     <h2> Information about occupations in the United States (courtesy of Mr. Brooks) </h2>
 
-    <h3> Random occupation: <a href="{{ occupations[{{ randomOccupation }}][1]}}">{{ randomOccupation }}</a> </h3>
+    <h3> Random occupation: <a href="{{ occupations[randomOccupation]['link'] }}">{{ randomOccupation }}</a></h3>
     
     <table border="1">
 
@@ -19,8 +19,8 @@
 
       {% for occupation in occupations %}
       <tr>
-	<td>{{ occupation }}</td>               <!-- occupation string -->
-	<td>{{ occupations[occupation][0] }}</td>  <!-- dict value of entry w/ key [occupation string] -->
+	<td><a href="{{ occupations[occupation]['link'] }}">{{ occupation }}</a></td> 
+	<td>{{ occupations[occupation]["percent"] }}</td>
       </tr>
 
       {% endfor %}
