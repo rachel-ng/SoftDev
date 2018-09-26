@@ -12,14 +12,14 @@ weights = []
 # POSTCONDITION: occupations dict is populated with occupation data
 def csvToDict():
     csvFileObject = open('./data/occupations.csv', 'r')  # opens csv in 'read' mode
-    readerObject = reader(csvFileObject)  # reads the csv
+    readerObject = reader(csvFileObject)  # reads csv
 
     for record in readerObject:
         if record[0] == "Job Class" or record[0] == "Total":  
             continue  # skips first and last records
         
         # record[0] = occupation (string), record[1] = percentage (string), record[2] = link (string)
-        # converts percentage into floating point
+        # converts percentage to a floating point
         else:
             occupations[ record[0] ] = [ float( record[1] ) , record[2] ]
             # occupation : [ <percentage> , <link> ]
@@ -35,10 +35,6 @@ def dictWeights():
     for listOfOccupationData in listValues:             # for each value in current list of occupation data
         weights.append( listOfOccupationData[0] )       # add percentage to list of weights
 
-# these accessor methods are necessary b/c
-# it doesn't make sense to keep reading the csv file & re-populate the occupations dict
-# every time we want to access the data
-
 # accessor methods so we don't need to reread csv file and repop occupations dict everytime we want to access the data
 # POSTCONDITION (both functions): occupations{} and weights[] must be populated w/ data
 def getOccupationsDict():
@@ -49,8 +45,5 @@ def getWeights():
 
 def getRandomOccupation():
     return choices( list(getOccupationsDict().keys()) , weights = getWeights() )[0]
-# puts the keys to occupation dict in a list, choose randomly (weighted) from that list
-# random.choices() returns a k-sized list (default=1) ... only concerned with first output
-
-#choices( list(getOccupationsDict().keys()) , weights = getWeights() )[0]
-
+# puts keys to occupation dict in list, choose randomly (weighted) from list
+# random.choices() returns k-sized list (default=1) ... only concerned with first output

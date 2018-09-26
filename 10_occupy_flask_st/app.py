@@ -3,10 +3,13 @@
 # K10 -- Jinja Tuning
 # 2018-09-25
 
-import util.auxiliary as aux
 from flask import Flask, render_template
-
 app = Flask(__name__)  # create instance of class Flask
+
+import util.auxiliary as aux #imports python functions
+
+occupations = aux.getOccupationsDict()
+weights = aux.getWeights()
 
 @app.route("/")
 def rootroute():
@@ -23,7 +26,7 @@ def showOccupations():
 
 
 if __name__ == "__main__":
-    # must populate dictionary & list with data
+    # must populate dictionary & list with daxsta
     # these methods are not linked to a Flask route,
     # so not necessary that app is running...
     aux.csvToDict()
