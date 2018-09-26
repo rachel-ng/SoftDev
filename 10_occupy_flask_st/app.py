@@ -8,9 +8,6 @@ app = Flask(__name__)  # create instance of class Flask
 
 import util.auxiliary as aux #imports python functions
 
-occupations = aux.getOccupationsDict()
-weights = aux.getWeights()
-
 @app.route("/")
 def rootroute():
     return "<h2><a href='/occupations'>Click here for /occupations</a></h2>" # link to /occupations
@@ -26,9 +23,7 @@ def showOccupations():
 
 
 if __name__ == "__main__":
-    # must populate dictionary & list with daxsta
-    # these methods are not linked to a Flask route,
-    # so not necessary that app is running...
+    # app doesn't need to be running to populate dictionary w. data
     aux.csvToDict()
     aux.dictWeights()
     
