@@ -10,7 +10,8 @@ def authenticate():
     print(request.args)
     print(request.args['username'])
     print(request.headers)
-    return "Waaaa hooo HAAAH"
+    return "hi " + request.args['username'] + "<br> your request method was" + request
+#render_template("template.html", title = "hi", username = request.args['username'])
 
 @app.route("/")
 def home():
