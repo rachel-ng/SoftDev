@@ -10,3 +10,9 @@
 [qaf](https://groups.google.com/a/stuy.edu/forum/#!forum/softdev18-19)
 
 [python 3.7.0 docs](https://docs.python.org/3/)
+
+copypasta for the folders (if you're lazy)
+
+```
+mkdir data; mkdir static; mkdir templates; mkdir util
+```
