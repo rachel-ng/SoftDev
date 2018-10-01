@@ -18,7 +18,7 @@ def authenticate():
     print(request.headers)
     return render_template("template.html",
                            title = "hi",
-                           username = request.forms['username'],
+                           username = request.form['username'],
                            rmethod = request.method)#,
                           # fullpath = request.full_path)
     # return "hi " + request.args['username'] + "<br>your request method was " + request.method + "<br> your full path is " + request.full_path
