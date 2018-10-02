@@ -3,8 +3,14 @@
 {% block title %} Login! {% endblock %}
 
 {% block content%}
+
     <h1>Login!</h1>
-    
+
+    {% set msgs = get_flashed_messages() %}
+    {% for each in msgs %}
+    <h3>Error: {{ each }}</h4>
+    {% endfor %}
+	
     <form action = "/login" method="POST">
       Username: <input type = "text" name = "username">
       <br>
@@ -12,10 +18,5 @@
       <br>
       <input type = "submit" name = "sub1">
     </form>
+    
 {% endblock %}
-
-    {% set msgs= get_flashed_messages() %}
-    {% for each in msgs %}
-    {{ each }}
-    <br>
-    {% endfor %}
