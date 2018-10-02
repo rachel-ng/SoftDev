@@ -1,3 +1,8 @@
+# Team Riiiii -- Rachel Ng and Ivan Zhang
+# SoftDev1 pd7
+# K14 -- Do I Know You?
+# 2018-10-01
+
 from flask import Flask, render_template, request, session, url_for, redirect
 from config import sec_key
 
