@@ -29,19 +29,17 @@ def login():
     p("logging in...\tuser: " + request.form["username"])
     
     if request.form["username"] != usr and request.form["passwd"] != pw: # both wrong error page
-        session["msg"] = "wrong username and password"
+        session["msg"] = "Wrong username and password"
         return redirect(url_for("error"))
     elif request.form["username"] != usr: # wrong username error page
-        session["msg"] = "wrong username"
+        session["msg"] = "Wrong username"
         return redirect(url_for("error")) 
     elif request.form["passwd"] != pw: # wrong password error page
-        session["msg"] = "wrong password"
+        session["msg"] = "Wrong password"
         return redirect(url_for("error"))
-    else: # adds username and password to session
-        session["username"] = request.form["username"]
+    else: # adds username and password to session, no cookies ;~;
+        session["username"] = request.form["username"] 
         session["passwd"] = request.form["passwd"]
-        # request.cookies.get("username") - returns None # attempt w/ cookies
-        # request.cookies.get("passwd") - returns None # attempt w/ cookies
     p(session)
     return redirect(url_for("home")) # return home page
 
@@ -61,7 +59,6 @@ def logout():
     
     if request.form["sub1"] == "Logout": # logout button
         session.clear() # clears session
-        # session.pop("username") # session.pop("passwd") # session.pop("msg")
         return render_template("home.html") # return home page
 
 
