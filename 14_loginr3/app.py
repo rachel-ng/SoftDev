@@ -10,6 +10,10 @@ pw = "pass"
 @app.route("/")
 def root():
     print ("root")
+    print (session)
+    if len(session.keys()) > 0:
+        return render_template("logout.html",
+                               username = session["username"])
     return render_template("login.html")
             
 @app.route("/login", methods=["POST"])
@@ -28,6 +32,9 @@ def login():
     else:
         session["username"] = request.form["username"] #request.cookies.get("username")
         session["passwd"] = request.form["passwd"] #request.cookies.get("passwd")
+        print (session["username"])
+        print (session["passwd"])
+        print (session)
     return redirect(url_for("welcome"))
 
 @app.route("/error")
@@ -45,9 +52,11 @@ def welcome():
 def logout():
     print ("byeeeeeee")
     if request.form["sub1"] == "Logout":
-        session.pop("username")
-        session.pop("passwd")
-        return render_template("home.html")
+        # session.pop("username")
+        # session.pop("passwd")
+        # session.pop("msg")
+        session.clear() # clears session
+        return render_template("home.html") 
 
 
 if __name__ == "__main__":
