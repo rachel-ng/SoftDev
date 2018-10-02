@@ -21,8 +21,7 @@ def p(nt): # turn printing messages on and off
 @app.route("/") # for both root and /home
 @app.route("/home")
 def home():
-    p("")
-    p("home")
+    p("\nhome")
     p(session)
     
     if len(session.keys()) > 0: # if session isn't empty, return home page w/ greeting
@@ -31,8 +30,7 @@ def home():
             
 @app.route("/login", methods=["POST"])
 def login():
-    p("")
-    p("logging in...\tuser: " + request.form["username"])
+    p("\nlogging in...\tuser: " + request.form["username"])
     
     if request.form["username"] != usr and request.form["passwd"] != pw: # both wrong error page
         session["msg"] = "Wrong username and password"
@@ -51,8 +49,7 @@ def login():
 
 @app.route("/error")
 def error():
-    p("")
-    p("oof - an error has occured: " + session["msg"])
+    p("\noof - an error has occured: " + session["msg"])
     
     problem = session["msg"] # stores error message
     session.clear() # clears session so we can try logging in again
@@ -60,8 +57,7 @@ def error():
 
 @app.route("/logout", methods=["POST"])
 def logout():
-    p("")
-    p("logging out...")
+    p("\nlogging out...")
     
     if request.form["sub1"] == "Logout": # logout button
         session.clear() # clears session
