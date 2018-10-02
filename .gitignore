@@ -128,5 +128,4 @@ ehthumbs.db
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 /hwCreator.py
-/14_login/config.py
-/15_flashinh/config.py
+config.py
