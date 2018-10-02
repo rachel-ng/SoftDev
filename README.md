@@ -16,3 +16,13 @@ copypasta for the folders (if you're lazy)
 ```
 mkdir data; mkdir static; mkdir templates; mkdir util
 ```
+
+for diagnostic print statements
+
+```
+pri = False
+
+def p(nt): # turn printing messages on and off
+    if pri == True: 
+        print (nt)
+```

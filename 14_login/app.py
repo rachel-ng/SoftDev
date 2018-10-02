@@ -4,13 +4,21 @@ from config import sec_key
 app = Flask(__name__)
 app.secret_key = sec_key
 
-un = "bob"
+usr = "bob"
 pw = "pass"
 
+pri = False
+
+def p(nt): # turn printing messages on and off
+    if pri == True: 
+        print (nt)
+        
 @app.route("/")
-def root():
-    print ("root")
-    print (session)
+@app.route("/home")
+def home():
+    p("")
+    p("home")
+    p(session)
     if len(session.keys()) > 0:
         return render_template("logout.html",
                                username = session["username"])
@@ -18,39 +26,37 @@ def root():
             
 @app.route("/login", methods=["POST"])
 def login():
-    print ("login")
-    print(request.form["username"])
-    if request.form["username"] != un and request.form["passwd"] != pw:
+    p("")
+    p("logging in...\tuser: " + request.form["username"])
+    if request.form["username"] != usr and request.form["passwd"] != pw: # both wrong
         session["msg"] = "wrong username and password"
         return redirect(url_for("error"))
-    if request.form["username"] != un:
+    if request.form["username"] != usr:  # wrong username
         session["msg"] = "wrong username"
         return redirect(url_for("error"))
-    if request.form["passwd"] != pw:
+    if request.form["passwd"] != pw:  # wrong password
         session["msg"] = "wrong password"
         return redirect(url_for("error"))
     else:
-        session["username"] = request.form["username"] #request.cookies.get("username")
-        session["passwd"] = request.form["passwd"] #request.cookies.get("passwd")
-        print (session["username"])
-        print (session["passwd"])
-        print (session)
-    return redirect(url_for("welcome"))
+        session["username"] = request.form["username"]
+        #request.cookies.get("username") - returns None
+        session["passwd"] = request.form["passwd"]
+        #request.cookies.get("passwd") - returns None
+        p(session)
+    return redirect(url_for("home"))
 
 @app.route("/error")
 def error():
-    print ("oof - an error")
-    return render_template("error.html", error_message = session["msg"])
-
-@app.route("/home")
-def welcome():
-    print ("help, i've fallen and i can't get up")
-    return render_template("logout.html",
-                           username = session["username"])
+    p("")
+    p("oof - an error has occured: " + session["msg"])
+    problem = session["msg"] # stores error message
+    session.clear() # clears session so we can try logging in again
+    return render_template("error.html", error_message = problem) 
 
 @app.route("/logout", methods=["POST"])
 def logout():
-    print ("byeeeeeee")
+    p("")
+    p("logging out...")
     if request.form["sub1"] == "Logout":
         # session.pop("username")
         # session.pop("passwd")
