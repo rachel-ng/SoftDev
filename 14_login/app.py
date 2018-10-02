@@ -1,9 +1,10 @@
-from flask import Flask, render_template, session, request, url_for, redirect
+from flask import Flask, render_template, request, session, url_for, redirect
 from config import sec_key
 
 app = Flask(__name__)
 app.secret_key = sec_key # secret key, make sure others can't see!
 
+# "hard coded" username and password
 usr = "bob" 
 pw = "pass"
 
