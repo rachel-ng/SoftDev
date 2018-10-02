@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.secret_key = sec_key
 
 un = "bob"
-pw = "kazi"
+pw = "pass"
 
 @app.route("/")
 def root():
