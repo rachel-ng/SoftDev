@@ -3,6 +3,10 @@
 # K16 -- No Trouble    or Treble
 # 2018-10-04
 
+# python db_builder.py; sqlite3 rv.db
+# SELECT * FROM courses;
+# SELECT * FROM peeps;
+
 import sqlite3 # control sqlite db
 import csv # csv I/O
 
@@ -11,11 +15,6 @@ if os.path.isfile("rv.db"): # removes rv.db if it exists so we don't get
     os.remove("rv.db") # 'sqlite3.OperationalError: table courses already exists'
 else:
     pass # doesn't do anything if rv.db doesn't exist
-
-
-# python db_builder.py; sqlite3 rv.db
-# SELECT * FROM courses;
-# SELECT * FROM peeps;
 
 
 pri = False
