@@ -10,7 +10,7 @@
 import sqlite3 # control sqlite db
 import csv # csv I/O
 
-import os # removes rv.db so we don't get 'sqlite3.OperationalError: table courses already exists'
+import os
 if os.path.isfile("rv.db"): # removes rv.db if it exists so we don't get 
     os.remove("rv.db") # 'sqlite3.OperationalError: table courses already exists'
 else:
@@ -24,7 +24,7 @@ def p(nt): # turn printing messages on and off (diagnostics)
         print (nt)
 
 
-DB_FILE="rv.db"
+DB_FILE = "rv.db"
 
 db = sqlite3.connect(DB_FILE) # opens or makes the file
 c = db.cursor() 
