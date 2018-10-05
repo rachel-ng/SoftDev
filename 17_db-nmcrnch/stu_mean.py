@@ -60,11 +60,17 @@ for row in peeps: # adds name, id, and age to peeps
 
 c.execute("SELECT id FROM peeps")
 peeps_ids = c.fetchall()
-print (peeps_ids)
 
-c.execute("SELECT peeps.id, peeps.name, courses.mark FROM peeps, courses WHERE peeps.id = courses.id;")
-print c.fetchall()
+peeps_avg = {}
+for id in peeps_ids:
+    peeps_avg[id] = []
 
+print peeps_avg
+
+c.execute("SELECT id, mark FROM courses;")
+grades = c.fetchall()
+
+for ids in 
 
 db.commit() # saves changes
 db.close() # closes db
