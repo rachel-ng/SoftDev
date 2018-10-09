@@ -70,30 +70,26 @@ def calcAvg():
         for m in peeps_grades[s]:
             grade += m
             div += 1
-        peeps_avg[s] = [grade / div, div] # [average, num classes]
-    #p(peeps_avg)    
-    #p(peeps_names)
+        peeps_avg[s][0] = grade / div
+        peeps_avg[s][1] = div # [average, num classes]
+    p(peeps_avg)    
 
 
-peeps_avg = {} # id : avg
+peeps_avg = {} # id : avg, # of grades, name
 peeps_grades = {} # id : list grades
-peeps_names = {} # id : name
 
 c.execute("SELECT name, id FROM peeps") # get ids from peeps
 for student in c.fetchall(): # make dictionaries
-    peeps_avg[student[1]] = [] # for avg
+    peeps_avg[student[1]] = [0,0,student[0]] # avg, name
     peeps_grades[student[1]] = [] # for list of grades
-    peeps_names[student[1]] = student[0] # id : name 
 #p(peeps_avg)
 #p(peeps_grades)
-#p(peeps_names)
 
 c.execute("SELECT id, mark FROM courses;") # get ids and grades from courses
 for g in c.fetchall(): # add list of grades to peeps_grades
     peeps_grades[g[0]].append(g[1])
 #p(peeps_grades)
 
-    
 # makes peeps _avg table in rip.db
 command = "CREATE TABLE peeps_avg (id INTEGER, avg INTEGER);"
 #p("\n" + command)
@@ -102,12 +98,12 @@ c.execute(command)
 calcAvg() # (re)calculates avgs
 for s in peeps_avg: # adds id, name to peeps_avg
     params = (s,peeps_avg[s][0])
+
     c.execute("INSERT INTO peeps_avg VALUES (?,?)", params)
 
-    
 # prints peeps id name avg
-for peep in peeps_names:
-    print str(peep) + "\t" + peeps_names[peep] + ": " + str(peeps_avg[peep][0])
+for peep in peeps_avg:
+    print str(peep) + "\t" + str(peeps_avg[peep][2]) + ": " + str(peeps_avg[peep][0])
 
 
 db.commit() # saves changes
