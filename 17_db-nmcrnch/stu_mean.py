@@ -19,7 +19,7 @@ else:
     pass # doesn't do anything if rip.db doesn't exist
 
 
-pri = False
+pri = True
 
 def p(nt): # turn printing messages on and off (diagnostics)
     if pri == True: 
@@ -72,7 +72,7 @@ def calc_avg():
             div += 1
         peeps_avg[s][0] = grade / div
         peeps_avg[s][1] = div # [average, num classes]
-    p(peeps_avg)    
+    #p(peeps_avg)    
 
 
 # dictionaries for avg and grades
