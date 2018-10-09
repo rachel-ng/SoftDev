@@ -25,10 +25,12 @@ def p(nt): # turn printing messages on and off (diagnostics)
     if pri == True: 
         print (nt)
 
+
 DB_FILE = "rip.db"
 
 db = sqlite3.connect(DB_FILE) # opens or makes the file
 c = db.cursor() 
+
 
 
 # opens courses.csv and makes a dictionary (courses)
@@ -59,7 +61,8 @@ for row in peeps: # adds name, id, and age to peeps
     c.execute("INSERT INTO peeps VALUES (?,?,?)", params)
 
 
-# for calculating averages
+
+# (re)calculates averages
 def calcAvg(): 
     for s in peeps_grades: # gets avg and puts in peeps_avg
         grade = 0.0
@@ -84,12 +87,11 @@ for student in c.fetchall(): # make dictionaries
 #p(peeps_avg)
 #p(peeps_grades)
 #p(peeps_names)
-    
+
 c.execute("SELECT id, mark FROM courses;") # get ids and grades from courses
 for g in c.fetchall(): # add list of grades to peeps_grades
     peeps_grades[g[0]].append(g[1])
 #p(peeps_grades)
-
 
     
 # makes peeps _avg table in rip.db
@@ -97,14 +99,14 @@ command = "CREATE TABLE peeps_avg (id INTEGER, avg INTEGER);"
 #p("\n" + command)
 c.execute(command)
 
-calcAvg()
-
-for s in peeps_avg:
+calcAvg() # (re)calculates avgs
+for s in peeps_avg: # adds id, name to peeps_avg
     params = (s,peeps_avg[s][0])
     c.execute("INSERT INTO peeps_avg VALUES (?,?)", params)
 
-
-for peep in peeps_names: # prints peeps id name avg
+    
+# prints peeps id name avg
+for peep in peeps_names:
     print str(peep) + "\t" + peeps_names[peep] + ": " + str(peeps_avg[peep][0])
 
 
