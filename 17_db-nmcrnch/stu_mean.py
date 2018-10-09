@@ -63,7 +63,7 @@ for row in peeps: # adds name, id, and age to peeps
 
 
 # (re)calculates averages
-def calcAvg(): 
+def calc_avg(): 
     for s in peeps_grades: # gets avg and puts in peeps_avg
         grade = 0.0
         div = 0
@@ -75,6 +75,7 @@ def calcAvg():
     p(peeps_avg)    
 
 
+# dictionaries for avg and grades
 peeps_avg = {} # id : avg, # of grades, name
 peeps_grades = {} # id : list grades
 
@@ -95,10 +96,9 @@ command = "CREATE TABLE peeps_avg (id INTEGER, avg INTEGER);"
 #p("\n" + command)
 c.execute(command)
 
-calcAvg() # (re)calculates avgs
+calc_avg() # (re)calculates avgs
 for s in peeps_avg: # adds id, name to peeps_avg
     params = (s,peeps_avg[s][0])
-
     c.execute("INSERT INTO peeps_avg VALUES (?,?)", params)
 
 # prints peeps id name avg
@@ -107,11 +107,13 @@ for peep in peeps_avg:
 
 
 
-def addCourse(code, id, mark):
+def add_course(code, id, mark):
     params = (code, id, mark)
     c.execute("INSERT INTO courses VALUES (?,?,?)", params)
 
-#addCourse("english",5,90)
+#add_course("english", 5, 90)
+
+
 
 db.commit() # saves changes
 db.close() # closes db
