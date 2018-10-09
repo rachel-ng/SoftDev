@@ -19,7 +19,7 @@ else:
     pass # doesn't do anything if rip.db doesn't exist
 
 
-pri = True
+pri = False
 
 def p(nt): # turn printing messages on and off (diagnostics)
     if pri == True: 
@@ -105,6 +105,13 @@ for s in peeps_avg: # adds id, name to peeps_avg
 for peep in peeps_avg:
     print str(peep) + "\t" + str(peeps_avg[peep][2]) + ": " + str(peeps_avg[peep][0])
 
+
+
+def addCourse(code, id, mark):
+    params = (code, id, mark)
+    c.execute("INSERT INTO courses VALUES (?,?,?)", params)
+
+#addCourse("english",5,90)
 
 db.commit() # saves changes
 db.close() # closes db
