@@ -12,7 +12,7 @@
 [python 3.7.0 docs](https://docs.python.org/3/)  
 [jinja 2.10 docs](http://jinja.pocoo.org/docs/2.10/)  
 &nbsp;&nbsp;&nbsp;&nbsp;[templates](http://jinja.pocoo.org/docs/2.10/templates/)
-[flask 1.0 docs](http://flask.pocoo.org/docs/1.0/)
+[flask 1.0 docs](http://flask.pocoo.org/docs/1.0/)  
 &nbsp;&nbsp;&nbsp;&nbsp;[quickstart](http://flask.pocoo.org/docs/1.0/quickstart/)
 
 copypasta for the folders (if you're lazy)
