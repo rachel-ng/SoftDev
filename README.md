@@ -13,7 +13,7 @@
 [jinja 2.10 docs](http://jinja.pocoo.org/docs/2.10/)  
 &nbsp;&nbsp;&nbsp;&nbsp;[templates](http://jinja.pocoo.org/docs/2.10/templates/)  
 [flask 1.0 docs](http://flask.pocoo.org/docs/1.0/)  
-&nbsp;&nbsp;&nbsp;&nbsp;[quickstart](http://flask.pocoo.org/docs/1.0/quickstart/)
+&nbsp;&nbsp;&nbsp;&nbsp;[quickstart](http://flask.pocoo.org/docs/1.0/quickstart/)  
 [mdn css](https://developer.mozilla.org/en-US/docs/Web/CSS)  
 &nbsp;&nbsp;&nbsp;&nbsp;[reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
