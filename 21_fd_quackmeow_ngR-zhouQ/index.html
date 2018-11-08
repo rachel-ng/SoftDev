@@ -5,18 +5,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Foundation 5</title>
-
+  <!-- app.css override -->
   <link rel="stylesheet" href="css/app.css">
-
+  <!--CDN-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/css/foundation.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/js/foundation.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/js/vendor/jquery.min.js"></script>
 
 </head>
 <body>
-
+  
+  <!-- start grid -->
   <div class="grid-container">
-    
+
+    <!-- heading -->
     <div class="grid-x grid-padding-x">
       <div class="large-12 cell">
 	<br>
@@ -25,15 +27,16 @@
       </div>
     </div>
     
-    <hr/>
-    
-    <div class="grid-x grid-padding-x">
+    <hr>
+
+    <!-- foundation framework -->
+    <div id="download" class="grid-x grid-padding-x">
       <div class="cell large-4">
 	<h4><a href="https://foundation.zurb.com">Foundation Framework</a></h4>
       </div>
       <div class="cell large-8">
 	<p>Foundation is a framework, you can download it <a href="https://foundation.zurb.com/sites/download.html/">here</a>.</p>
-	<p>File are generally organized like this:</p>
+	<p>File are organized like this:</p>
 	<div class="grid-x grid-padding-x">
 	  <div class="cell large-10"><pre class="block">foundation/
   ├─ css/
@@ -49,19 +52,21 @@
       </div>
     </div>
 
-    <hr/>
+    <hr>
 
+    <!-- documentation -->
     <div class="grid-x grid-padding-x">
       <div class="cell large-4"><h4><a href="https://foundation.zurb.com/sites/docs/">Documentation</a></h4></div>
       <div class="cell large-8">
 	<p>All classes you will be referencing can be found <a href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/css/foundation.css">here</a>.<br>Here are some pages of interest.</p>
 	
 	<div class="grid-x grid-padding-x">
-	  <div class="cell large-3"><h5><a href="https://foundation.zurb.com/sites/docs/typography-base.html">Base Typography</a></h4></div>
+	  <div class="cell large-3"><h5><a href="https://foundation.zurb.com/sites/docs/typography-base.html">Base Typography</a></h4>
+          </div>
 	  <div class="cell large-9">
 	    <p>For all your text / type needs.</p>
 	  </div>
-</div>
+        </div>
 
 	<div class="grid-x grid-padding-x">
 	  <div class="cell large-3"><h5><a href="https://foundation.zurb.com/sites/docs/xy-grid.html">XY Grid</a></h4></div>
@@ -75,15 +80,18 @@
       </div>
     </div>
     
-<hr/>
+<hr>
 
+
+    <!-- basic template -->
     <div class="grid-x grid-padding-x">
       <div class="cell large-12">
 	<h4 id="template"><a href="#template">Basic HTML Template</a></h4>
 
-	<p>This is a super basic template that uses <a href="#cdn">CDN</a>. If you have custom CSS, you can store it in <code>app.css</code> in your <code>css/</code> folder</p>
+	<p>This is a super basic template that uses <a href="#cdn">CDN</a>. If you have custom CSS, store it in <code>app.css</code> in your <code>css/</code> folder</p>
 	<br>
-	
+
+	<!-- &lt; = <, &gt; = > -->
 	<pre class="block">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -106,7 +114,9 @@
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-	<br><br>
+	<br>
+
+	<hr>
 
 	<div class="grid-x grid-padding-x">
 	  <div class="cell large-12"><h4 id="cdn"><a href="#cdn">CDN</a></h4>
@@ -122,52 +132,40 @@
 </div>
 
     <br>
-    <hr/>
+    <hr>
 
-    <div class="grid-x grid-padding-x">
+    <!-- callouts -->
+    <div id="co" class="grid-x grid-padding-x">
       <div class="cell large-12">
-	<h4 id="interesting"><a href="#interesting">Interesting Features</a></h4>
+	<h4 id="template"><a href="#template">Interesting Features</a></h4>
 	<p>This is an XY Grid, with different sized cells. Callout has been applied with different colors and sizes.</p>
 
 	<br>
 	
+	<!-- row 1 -->
 	<div class="grid-x grid-padding-x">
 	  <div class="cell large-12 large callout text-center">Large Callout<br>12 cells</div>
 	</div>
 
+	<!-- row 2 -->
 	<div class="grid-x grid-padding-x">
 	  <div class="cell large-6 primary callout text-center">Normal Primary<br>6 cells</div>
 	  <div class="cell large-6 secondary callout text-center">Normal Secondary<br>6 cells</div>
 	</div>
 
+	<!-- row 3 -->
 	<div class="grid-x grid-padding-x">
 	  <div class="cell large-4 small success callout text-center">Small Success<br>4 cells</div>
 	  <div class="cell large-4 small alert callout text-center">Small Alert<br>4 cells</div>
 	  <div class="cell large-4 small warning callout text-center">Small Warning<br>4 cells</div>
 	</div>
-	
-	<br>
-	
-	<h5>Code for 3 small 4-cell cells with callout and colors:</h5>
-	<pre class="block">&lt;div class="grid-x grid-padding-x"&gt;
-    &lt;div class="cell large-4 small success callout text-center"&gt;
-        &lt;!-- content here --&gt;
-    &lt;/div&gt;
-    &lt;div class="cell large-4 small alert callout text-center"&gt;
-        &lt;!-- content here --&gt;
-    &lt;/div&gt;
-    &lt;div class="cell large-4 small warning callout text-center"&gt;
-        &lt;!-- content here --&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-
-	<br>
+		
+	<br><br>
 	  
       </div>
     </div>
 
-    <hr/>
-    
+    <!-- other things -->
     <div class="grid-x grid-padding-x">
       
       <div class="cell large-4">
@@ -194,7 +192,38 @@
 	
     </div>
 
-    <hr/>
+    <hr>
+
+    <div class="grid-x grid-padding-x">
+      <div class="grid-x large-4"><h4> Navigation</h4></div>
+      <div class="cell large-auto">
+	<div class="grid-x grid-padding-x">
+	  <div class="grid-x large-4"><a href="#Download"><h5> Download</h5></a></div>
+	  <div class="grid-x large-8"><p> Go to download Foundation</p></div>
+	</div>
+	<div class="grid-x grid-padding-x">
+	  <div class="grid-x large-4"><a href="#Doc"><h5> Documentation</h5></a></div>
+	  <div class="grid-x large-8>"><p> View Documentation</p></div>
+	</div>
+	<div class="grid-x grid-padding-x">
+	  <div class="grid-x large-4"><a href="#template"><h5> View Template</h5></a></div>
+	  <div class="grid-x large-8"> See Template Section of Page</div>
+	</div>
+	<div class="grid-x grid-padding-x">
+	  <div class="grid-x large-4"><a href="#CO"><h5>Calling Out</h5></a></div>
+	  <div class="grid-x large-8"> See Calling Out</div>
+	</div>
+	<div class="grid-x grid-padding-x">
+	  <div class="grid-x large-4"><a href="#etc"><h5>Others</h5></a></div>
+	  <div class="grid-x large-8"> Some other links</div>
+	</div>
+      </div>
+    </div>
+    
+    
+    <br>
+    <hr><br>
+
     
     <div class="grid-x grid-padding-x">
       <div class="cell large-12 footer">
