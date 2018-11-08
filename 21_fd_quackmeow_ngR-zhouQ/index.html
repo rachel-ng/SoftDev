@@ -66,7 +66,7 @@
 	<div class="grid-x grid-padding-x">
 	  <div class="cell large-3"><h5><a href="https://foundation.zurb.com/sites/docs/xy-grid.html">XY Grid</a></h4></div>
 	  <div class="cell large-9">
-	    <p>Used for formatting pages.<br><x class="subheader">(It's heavily used in the formatting of this page!)<x></p>
+	    <p>Used for formatting pages. You can see them <a href="#interesting">here</a>.<br><x class="subheader">(It's also heavily used in the formatting of this page)<x></p>
 	  </div>
 	</div>
 
@@ -126,26 +126,43 @@
 
     <div class="grid-x grid-padding-x">
       <div class="cell large-12">
-	<h4 id="template"><a href="#template">Interesting Features</a></h4>
-	<p>This is an XY Grid, with different sized cells. Callout has been applied with different coloring and sizes</p>
+	<h4 id="interesting"><a href="#interesting">Interesting Features</a></h4>
+	<p>This is an XY Grid, with different sized cells. Callout has been applied with different colors and sizes.</p>
+
 	<br>
+	
 	<div class="grid-x grid-padding-x">
-	  <div class="cell large-12 large callout text-center">Large Callout<br>12 cell</div>
+	  <div class="cell large-12 large callout text-center">Large Callout<br>12 cells</div>
 	</div>
 
 	<div class="grid-x grid-padding-x">
-	  <div class="cell large-6 primary callout text-center">Normal Primary<br>6 cell</div>
-	  <div class="cell large-6 secondary callout text-center">Normal Secondary<br>6 cell</div>
+	  <div class="cell large-6 primary callout text-center">Normal Primary<br>6 cells</div>
+	  <div class="cell large-6 secondary callout text-center">Normal Secondary<br>6 cells</div>
 	</div>
 
 	<div class="grid-x grid-padding-x">
-	  <div class="cell large-4 small success callout text-center">Small Success<br>4 cell</div>
-	  <div class="cell large-4 small alert callout text-center">Small Alert<br>4 cell</div>
-	  <div class="cell large-4 small warning callout text-center">Small Warning<br>4 cell</div>
+	  <div class="cell large-4 small success callout text-center">Small Success<br>4 cells</div>
+	  <div class="cell large-4 small alert callout text-center">Small Alert<br>4 cells</div>
+	  <div class="cell large-4 small warning callout text-center">Small Warning<br>4 cells</div>
 	</div>
 	
-	<br><br>
+	<br>
+	
+	<h5>Code for 3 small 4-cell cells with callout and colors:</h5>
+	<pre class="block">&lt;div class="grid-x grid-padding-x"&gt;
+    &lt;div class="cell large-4 small success callout text-center"&gt;
+        &lt;!-- content here --&gt;
+    &lt;/div&gt;
+    &lt;div class="cell large-4 small alert callout text-center"&gt;
+        &lt;!-- content here --&gt;
+    &lt;/div&gt;
+    &lt;div class="cell large-4 small warning callout text-center"&gt;
+        &lt;!-- content here --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
 
+	<br>
+	  
       </div>
     </div>
 
@@ -192,8 +209,6 @@
   
 <script src="js/vendor/jquery.js"></script>
 <script src="js/foundation.min.js"></script>
-<script>
-  $(document).foundation();
-</script>
+
 </body>
 </html>
