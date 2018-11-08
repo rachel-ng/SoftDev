@@ -15,28 +15,44 @@
 </head>
 <body>
 
-  <div id="main">
-  <h1>Foundation 5</h1>
-  <ul class="menu">
-    <li><a href="#">One</a></li>
-    <li><a href="#">Two</a></li>
-    <li><a href="#">Three</a></li>
-    <li><a href="#template">Template</a></li>
-  </ul>
-
-  <div class="grid-x">
-    <div class="cell small-6"><a href="https://foundation.zurb.com">Foundation Framework</a>
+  <div class="grid-container">
+    
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+	<h1>Foundation 5</h1>
+      </div>
     </div>
     
-    <div class="cell small-6"><a href="https://foundation.zurb.com/sites/docs/">Docs</a>
+<hr/>
+    
+    <div class="grid-x grid-padding-x">
+      <div class="cell small-4">
+	<h4><a href="https://foundation.zurb.com">Foundation Framework</a></h4>
+      </div>
+      <div class="cell small-8"><pclass="lead">Foundation is a framework.</p><p>All the classes you will be referencing can be found <a href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/css/foundation.css">here</a>.
+     </div>
     </div>
-  </div>
-  <a href="https://foundation.zurb.com/building-blocks/">Building Blocks</a>
-  
-  <br><br>
-  
-  <h4 id="template">Basic HTML Template</h4>
-  <pre class="block">&lt;!DOCTYPE html&gt;
+
+<hr/>
+
+    <div class="grid-x grid-padding-x">
+      <div class="cell small-4"><h4><a href="https://foundation.zurb.com/sites/docs/">Docs</a></h4></div>
+      <div class="cell small-8"><pclass="lead">Documentation for Foundation.</p></div>
+    </div>
+
+<hr/>
+
+    <div class="grid-x grid-padding-x">
+      <div class="cell small-4"><h4><a href="https://foundation.zurb.com/building-blocks/">Building Blocks</a></h4></div>
+      <div class="cell small-8"><pclass="lead">Beautiful things for the lazy.</p></div>
+    </div>
+
+<hr/>
+
+    <div class="grid-x grid-padding-x">
+      <div class="cell large-12">
+	<h4 id="template"><a href="#template">Basic HTML Template</a></h4>
+	<pre class="block">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     
@@ -59,20 +75,16 @@
     
 &lt;/body&gt;
 &lt;/html&gt;</pre>
+      </div>
+    </div>
 
-  <br><br>
-  <pre class="block">Hi</pre>
+    <br>
 
-  <br><br>
+    
+  </div>
 
-  <br><br>
 
-  <br><br>
-
-  <button class="button">Yes.</button>
-  <br><br>
-
- </div>
+  
 <script src="js/vendor/jquery.js"></script>
 <script src="js/foundation.min.js"></script>
 <script>
