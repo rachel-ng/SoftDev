@@ -33,7 +33,7 @@
       </div>
       <div class="cell large-8">
 	<p>Foundation is a framework, you can download it <a href="https://foundation.zurb.com/sites/download.html/">here</a>.</p>
-	<p>File Organization:</p>
+	<p>File are generally organized like this:</p>
 	<div class="grid-x grid-padding-x">
 	  <div class="cell large-10"><pre class="block">foundation/
   ├─ css/
@@ -43,6 +43,9 @@
   └─ index.html</pre>
 	  </div>
 	</div>
+	<br>
+	<p>We'll be using <a href="#cdn">CDN</a> to access Foundation, so while downloading it isn't necessary, the index in the .zip is a nice example to look at.</p>
+	
       </div>
     </div>
 
@@ -52,12 +55,14 @@
       <div class="cell large-4"><h4><a href="https://foundation.zurb.com/sites/docs/">Documentation</a></h4></div>
       <div class="cell large-8">
 	<p>All classes you will be referencing can be found <a href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/css/foundation.css">here</a>.<br>Here are some pages of interest.</p>
+	
 	<div class="grid-x grid-padding-x">
 	  <div class="cell large-3"><h5><a href="https://foundation.zurb.com/sites/docs/typography-base.html">Base Typography</a></h4></div>
 	  <div class="cell large-9">
 	    <p>For all your text / type needs.</p>
 	  </div>
-	</div>
+</div>
+
 	<div class="grid-x grid-padding-x">
 	  <div class="cell large-3"><h5><a href="https://foundation.zurb.com/sites/docs/xy-grid.html">XY Grid</a></h4></div>
 	  <div class="cell large-9">
@@ -76,7 +81,7 @@
       <div class="cell large-12">
 	<h4 id="template"><a href="#template">Basic HTML Template</a></h4>
 
-	<p>This is a super basic template that uses CDN. If you have custom CSS, store it in <code>app.css</code> in your <code>css/</code> folder</p>
+	<p>This is a super basic template that uses CDN. If you have custom CSS, you can store it in <code>app.css</code> in your <code>css/</code> folder</p>
 	<br>
 	
 	<pre class="block">&lt;!DOCTYPE html&gt;
@@ -84,12 +89,10 @@
 &lt;head&gt;
     
      &lt;title&gt;Foundation Template&lt;/title&gt;
-     &lt;meta name = "viewport" content = "width = device-width, initial-scale = 1"&gt;
+     &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
 
-     &lt;!-- for custom css --&gt;
-     &lt;link rel="stylesheet" href="css/app.css"&gt;
+     &lt;link rel="stylesheet" href="css/app.css"&gt;    &lt;!-- for custom css --&gt;
 
-     &lt;!-- CDN: so we don't store 7 million copies of frameworks on stuy servers --&gt;
      &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/css/foundation.css"&gt; 
      &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/foundation.min.js">&lt;/script&gt;
      &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/vendor/jquery.min.js">&lt;/script&gt;
@@ -99,13 +102,26 @@
 &lt;body&gt;
     
      &lt;h1&gt;Hello, world!&lt;/h1&gt;
-    
+	  
 &lt;/body&gt;
 &lt;/html&gt;</pre>
-      </div>
-    </div>
 
-    <br>
+	<br><br>
+
+	<div class="grid-x grid-padding-x">
+	  <div class="cell large-12"><h4 id="cdn"><a href="#cdn">CDN</a></h4>
+	    <p>We'll be using CDN to access Foundation so we don't have to store a copy of it. </p>
+<pre class="block">&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/css/foundation.css"&gt; 
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/foundation.min.js">&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/vendor/jquery.min.js">&lt;/script&gt;</pre>
+         </div>
+       </div>
+
+</div>
+      
+</div>
+
+<br>
     
     <hr/>
     
@@ -120,7 +136,7 @@
 	<div class="grid-x grid-padding-x">
 	  <div class="cell large-3"><h5><a href="https://foundation.zurb.com/building-blocks/">Building Blocks</a></h4></div>
 	  <div class="cell large-9">
-	    <p>Nice things for lazy people.</p>
+	    <p>Interesting things to look into.</p>
 	  </div>
 	</div>
 
@@ -138,7 +154,7 @@
     <hr/>
     
     <div class="grid-x grid-padding-x">
-      <div class="cell large-12">
+      <div class="cell large-12 footer">
 	<h6 class="subheader text-right">Copyright &copy; 2018 Quackmeow</h6>
 	<br>
       </div>
