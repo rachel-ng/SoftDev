@@ -100,12 +100,11 @@
 
 
     <div class="grid-x grid-padding-x">  <!-- TEMPLATE -->
-      <div class="cell large-12">
+      <div class="cell">
 	<h3 id="template"><a href="#template">Basic HTML Template</a></h3>
 
 	<p>This is a super basic template that uses <a href="#cdn">CDN</a>.</p>
 	<p>If you have custom CSS or JS, you can store it in <code>app.css</code> in its respective folder</p>
-	<br>
 
 	<!-- &lt; = <, &gt; = > -->
 <div class="cell large-6 secondary callout"><pre>&lt;!DOCTYPE html&gt;
@@ -140,7 +139,7 @@
 
 
       <div class="grid-x grid-padding-x"> <!-- CDN -->
-	<div class="cell large-12">
+	<div class="cell">
 	  <h3 id="cdn"><a href="#cdn">CDN</a></h3>
 	  <p>We'll be using CDN to access Foundation so we don't have to store a copy of it. (It's already included in the template above)</p>
 <div class="cell large-6 secondary callout"><pre>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/css/foundation.css"&gt; 
@@ -156,9 +155,154 @@
 
     
     <div class="grid-y grid-padding-y"> <!-- INTERESTING FEATURES -->
-      <div class="cell large-12">
+      <div class="cell">
 	<h3 id="interesting"><a href="#interesting">Interesting Features</a></h3><br>
 
+	<h4>XY Grid</h4>
+	<p>Some styling has been added so you can see the grid</p>
+	
+	<div class="grid-x grid-padding-x grid-margin-x">
+
+	  <div class="cell">
+	    <div class="grid-x grid-padding-x grid-margin-x">
+	      <div class="cell large-6">
+		<pre class="secondary callout" style="font-size:.75em;">&lt;div class="grid-x"&gt;
+    &lt;div class="cell"&gt;text here&lt;/div&gt;
+    &lt;div class="cell large-6"&gt;text here&lt;/div&gt;
+    &lt;div class="cell large-3"&gt;text here&lt;/div&gt;
+    &lt;div class="cell large-3"&gt;text here&lt;/div&gt;
+&lt;/div&gt;</pre>
+	      </div>
+	      <div class="cell large-6">
+		<div class="grid-x">
+		  <div class="cell text-center" style="border: 1px solid #cacaca;">12</div>
+		  <div class="cell large-6 text-center" style="border: 1px solid #cacaca;">6</div>
+		  <div class="cell large-3 text-center" style="border: 1px solid #cacaca;">3</div>
+		  <div class="cell large-3 text-center" style="border: 1px solid #cacaca;">3</div>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="cell">
+	    <div class="grid-x grid-padding-x grid-margin-x">
+	      <div class="cell large-6">
+		<pre class="secondary callout" style="font-size:.75em;">&lt;div class="grid-x grid-padding-x"&gt;
+    &lt;div class="cell"&gt;text here&lt;/div&gt;
+    &lt;div class="cell large-6"&gt;text here&lt;/div&gt;
+    &lt;div class="cell large-3"&gt;text here&lt;/div&gt;
+    &lt;div class="cell large-3"&gt;text here&lt;/div&gt;
+&lt;/div&gt;</pre>
+	      </div>
+	      <div class="cell large-6">
+		<div class="grid-x grid-padding-x">
+		  <div class="cell text-center" style="border: 1px solid #cacaca;">12</div>
+		  <div class="cell large-6 text-center" style="border: 1px solid #cacaca;">6</div>
+		  <div class="cell large-3 text-center" style="border: 1px solid #cacaca;">3</div>
+		  <div class="cell large-3 text-center" style="border: 1px solid #cacaca;">3</div>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="cell">
+	    <div class="grid-x grid-padding-x grid-margin-x">
+	      <div class="cell large-6">
+		<pre class="secondary callout" style="font-size:.75em;">&lt;div class="grid-x grid-padding-x grid-margin-x"&gt;
+    &lt;div class="cell"&gt;text here&lt;/div&gt;
+    &lt;div class="cell large-6"&gt;text here&lt;/div&gt;
+    &lt;div class="cell large-3"&gt;text here&lt;/div&gt;
+    &lt;div class="cell large-3"&gt;text here&lt;/div&gt;
+&lt;/div&gt;</pre>
+	      </div>
+	      <div class="cell large-6">
+		<div class="grid-x grid-padding-x grid-margin-x">
+		  <div class="cell text-center" style="border: 1px solid #cacaca;">12</div>
+		  <div class="cell large-6 text-center" style="border: 1px solid #cacaca;">6</div>
+		  <div class="cell large-3 text-center" style="border: 1px solid #cacaca;">3</div>
+		  <div class="cell large-3 text-center" style="border: 1px solid #cacaca;">3</div>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="cell">
+	    <div class="grid-x grid-padding-x grid-margin-x">
+	      <div class="cell large-6">
+		<pre class="secondary callout" style="font-size:.75em;">&lt;div class="grid-y"&gt;
+    &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
+    &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
+    &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
+&lt;/div&gt;</pre>
+	      </div>
+	      <div class="cell large-6">
+		<div class="grid-y grid-margin-y">
+		  <div class="cell">
+		  <div class="grid-y">
+		    <div class="cell text-center" style="border: 1px solid #cacaca;">12</div>
+		    <div class="cell text-center" style="border: 1px solid #cacaca;">6</div>
+		    <div class="cell text-center" style="border: 1px solid #cacaca;">3</div>
+		  </div>
+		  </div>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	  
+	  <div class="cell">
+	    <div class="grid-x grid-padding-x grid-margin-x">
+	      <div class="cell large-6">
+		<pre class="secondary callout" style="font-size:.75em;">&lt;div class="grid-y grid-padding-y"&gt;
+    &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
+    &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
+    &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
+&lt;/div&gt;</pre>
+	      </div>
+	      <div class="cell large-6">
+		<div class="grid-y grid-padding-y grid-margin-y">
+		  <div class="cell">
+		    <div class="grid-y grid-padding-y">
+		      <div class="cell text-center" style="border: 1px solid #cacaca;">12</div>
+		      <div class="cell text-center" style="border: 1px solid #cacaca;">6</div>
+		      <div class="cell text-center" style="border: 1px solid #cacaca;">3</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="cell">
+	    <div class="grid-x grid-padding-x grid-margin-x">
+	      <div class="cell large-6">
+		<div class="grid-y grid-padding-y grid-margin-y">
+		  <div class="cell">
+		    <pre class="secondary callout" style="font-size:.75em;">&lt;div class="grid-y grid-padding-y grid-margin-y"&gt;
+    &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
+    &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
+    &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
+&lt;/div&gt;</pre>
+		  </div>
+		</div>
+	      </div>
+	      <div class="cell large-6">
+		<div class="grid-y grid-padding-y grid-margin-y">
+		  <div class="cell">
+		    <div class="grid-y grid-padding-y grid-margin-y">
+		      <div class="cell text-center" style="border: 1px solid #cacaca;">12</div>
+		      <div class="cell text-center" style="border: 1px solid #cacaca;">6</div>
+		      <div class="cell text-center" style="border: 1px solid #cacaca;">3</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	  
+	</div>
+
+
+	
 	<h4>Callout + Colors</h4>
 	<p>This is an XY Grid, with different sized cells. Callout has been applied with different colors and sizes.</p>
 
@@ -166,17 +310,17 @@
 
 	  <div class="cell large-6"> <!-- CALLOUT CODE -->
 	    <div class="grid-y grid-padding-y">
-	      <div class="cell large-12">
-		<pre class="secondary callout" style="font-size:.75em;">&lt;div class="cell large-12 large callout text-center"&gt;text here&lt;/div&gt;</pre>
+	      <div class="cell">
+		<pre class="secondary callout" style="font-size:.75em;">&lt;div class="cell large callout text-center"&gt;text here&lt;/div&gt;</pre>
 	      </div>
 
-	      <div class="cell large-12">
+	      <div class="cell">
 		<pre class="secondary callout" style="font-size:.75em;">
 &lt;div class="cell large-6 primary callout text-center"&gt;text here&lt;/div&gt;
 &lt;div class="cell large-6 secondary callout text-center"&gt;text here&lt;/div&gt;</pre>
 	      </div>
 	      
-	      <div class="cell large-12">
+	      <div class="cell">
 		<pre class="secondary callout" style="font-size:.75em;">
 &lt;div class="cell large-4 small success callout text-center"&gt;text here&lt;/div&gt;
 &lt;div class="cell large-4 small alert callout text-center"&gt;text here&lt;/div&gt;
@@ -185,17 +329,18 @@
 	    </div>
 	  </div> <!-- CALLOUT CODE -->
 	  
-	  <div class="grid-x grid-padding-x grid-margin-x large-6"> <!-- CALLOUT GRID -->
-	    <div class="cell large-12 large callout text-center">Large Callout<br>12 cells</div>
+	  <div class="cell large-6"><!-- CALLOUT GRID-->
+	    <div class="grid-x grid-padding-x grid-margin-x">
+	      <div class="cell large callout text-center">Large Callout<br>12 cells</div>
 
-	    <div class="cell large-6 primary callout text-center">Normal Primary<br>6 cells</div>
-	    <div class="cell large-6 secondary callout text-center">Normal Secondary<br>6 cells</div>
+	      <div class="cell large-6 primary callout text-center">Normal Primary<br>6 cells</div>
+	      <div class="cell large-6 secondary callout text-center">Normal Secondary<br>6 cells</div>
 
-	    <div class="cell large-4 small success callout text-center">Small Success<br>4 cells</div>
-	    <div class="cell large-4 small alert callout text-center">Small Alert<br>4 cells</div>
-	    <div class="cell large-4 small warning callout text-center">Small Warning<br>4 cells</div>
+	      <div class="cell large-4 small success callout text-center">Small Success<br>4 cells</div>
+	      <div class="cell large-4 small alert callout text-center">Small Alert<br>4 cells</div>
+	      <div class="cell large-4 small warning callout text-center">Small Warning<br>4 cells</div>
+	    </div> 
 	  </div> <!-- CALLOUT GRID-->
-	  
 	</div>
 
 <br>
@@ -205,7 +350,7 @@
 	
         <div class="grid-x grid-padding-x grid-margin-x">
 
-	  <div class="cell large-6">
+	  <div class="cell large-6"> <!-- CODE FOR IMG W/O CARD-SECTION -->
 	    <pre class="secondary callout" style="font-size:.75em;">&lt;div class="cell large-x"&gt;
     &lt;div class="card"&gt;
         &lt;img src="https://media.giphy.com/media/26xBK9cIkUSQ104k8/giphy.gif"&gt;
@@ -232,7 +377,7 @@
 	    </div>
 	  </div>
 
-	  <div class="cell large-6">
+	  <div class="cell large-6"> <!-- CODE FOR IMG W/ CARD-SECTION -->
 	    <pre class="secondary callout" style="font-size:.75em;">&lt;div class="cell large-x"&gt;
     &lt;div class="card"&gt;
         &lt;div class="card-section"&gt;
@@ -308,7 +453,7 @@
 
     
     <div class="grid-x grid-padding-x"> <!-- FOOTER -->
-      <div class="cell large-12 footer">
+      <div class="cell footer">
 	<h6 class="subheader text-right">Copyright &copy; 2018 Quackmeow</h6>
 	<br>
       </div>
