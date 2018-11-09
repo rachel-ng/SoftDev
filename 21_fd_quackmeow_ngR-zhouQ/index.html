@@ -134,7 +134,7 @@
 	<p>This is a super basic template that uses <a href="#cdn">CDN</a>.</p>
 	<p>If you have custom CSS or JS, you can store it in <code>app.css / app.js</code> in its respective folder</p>
 
-	<div class="cell large-6 secondary callout"><pre>&lt;!DOCTYPE html&gt;
+	<pre class="secondary callout small">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     
@@ -155,7 +155,7 @@
      &lt;h1&gt;Hello, world!&lt;/h1&gt;
 	  
 &lt;/body&gt;
-&lt;/html&gt;</pre></div>
+&lt;/html&gt;</pre>
       </div>
     </div>  <!-- TEMPLATE -->
 
@@ -169,10 +169,10 @@
       <div class="cell">
 	<h3 id="cdn"><a href="#cdn">CDN</a></h3>
 	<p>We'll be using CDN to access Foundation so we don't have to store a copy of it. (It's already included in the template above)</p>
-	<div class="cell large-6 secondary callout"><pre>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/css/foundation.css"&gt; 
+	<pre class="secondary callout small">&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/css/foundation.css"&gt; 
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/foundation.min.js">&lt;/script&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/vendor/jquery.min.js">&lt;/script&gt;</pre></div>
-      </div>
+      </pre>
     </div> <!-- CDN -->
 
 
@@ -188,7 +188,7 @@
 
 	
 	<h4>XY Grid</h4> <!-- XY GRID -->
-	<p>Some styling has been added so you can see the grid</p>
+	<p>Probably the <a href="https://foundation.zurb.com/sites/docs/xy-grid.html">best thing</a> since sliced bread. Some styling has been added so you can see the grid.</p>
 	
 	<div class="grid-x grid-padding-x grid-margin-x">
 
@@ -459,7 +459,7 @@
 
 	
 	<h4>Callout and Colors</h4>
-	<p>This is an XY Grid, with different sized cells. Callout has been applied with different colors and sizes.</p>
+	<p>This is an XY Grid, with different sized cells. <a href="https://foundation.zurb.com/sites/docs/callout.html">Callout</a> has been applied with different colors and sizes.</p>
 
 	<div class="grid-x grid-padding-x grid-margin-x">
 
@@ -505,7 +505,7 @@
 
 	
         <h4>Cards</h4>
-	<p>This is an XY Grid with cards.</p>
+	<p>This is an XY Grid with <a href="https://foundation.zurb.com/sites/docs/card.html">cards</a>.</p>
 	
         <div class="grid-x grid-padding-x grid-margin-x"> <!-- CARDS -->
 
@@ -622,11 +622,11 @@
 
 	
 	<h4>Forms</h4>
-	<p></p>
+	<p>Check out the <a href="https://foundation.zurb.com/sites/docs/forms.html">documentation</a> to look at <a href="https://foundation.zurb.com/sites/docs/forms.html#label-positioning">label positioning</a>, <a href="https://foundation.zurb.com/sites/docs/forms.html#inline-labels-and-buttons">inline labels and buttons</a>, and more.</p>
 	    
         <div class="grid-x grid-padding-x grid-margin-x"> <!-- FORMS -->
 	  <div class="cell large-4">
-	    <h5>Text Input</h5>
+	    <h5 class="subheader">Text Input</h5>
 	    <form>
 	      <label>Text Input
 		<input type="text" placeholder="input">
@@ -640,7 +640,8 @@
 	  </div>
 
 	  <div class="cell large-4">
-	    <form><h5>Number Input</h5>
+	    <h5 class="subheader">Number Input</h5>
+	    <form>
 	      <label>Number Input
 		<input type="number" value="100">
 	      </label>
@@ -653,7 +654,7 @@
 	  </div>
 
 	  <div class="cell large-4">
-	    <h5>Text Area</h5>
+	    <h5 class="subheader">Text Area</h5>
 	    <form>
 	      <label>Text Area
 		<textarea placeholder="None"></textarea>
@@ -667,7 +668,7 @@
 	  </div>
 
 	  <div class="cell large-6">
-	    <h5>Select Menu + Help Text</h5>
+	    <h5 class="subheader">Select Menu + Help Text</h5>
 	    <form>
 	      <label>Select Menu
 		<select>
@@ -695,7 +696,7 @@
 	  </div>
 
 	  <div class="cell large-6">
-	    <form><h5>Select Multiple Menu</h5>
+	    <form><h5 class="subheader">Select Multiple Menu</h5>
 	      <label>Select Multiple Menu<su class="subheader" style="margin-left: 16px;">Use ctrl / command (mac) to select</su>
 		<select multiple>
 		  <option value="pom">pom</option>
@@ -720,7 +721,7 @@
 	  </div>
 
 	  <div class="cell large-6">
-	    <h5>Radio Buttons</h5>
+	    <h5 class="subheader">Radio Buttons</h5>
 	    <fieldset class="cell large-6 ">
 	      <legend>Cats or Dogs</legend>
 	      <input type="radio" name="cd" value="cats" id="cats" required><label for="cats">Cats</label>
@@ -736,7 +737,7 @@
 	  </div>
 	  
 	  <div class="cell large-6">
-	    <h5>Checkboxes</h5>
+	    <h5 class="subheader">Checkboxes</h5>
 	    <fieldset class="cell large-6 ">
 	      <legend>Number</legend>
 	      <input id="checkbox1" type="checkbox"><label for="checkbox1">1</label>
@@ -753,7 +754,7 @@
 	</div>
 
 	<div class="cell large-6">
-	  <h5>Fieldset Styles</h5>
+	  <h5 class="subheader">Fieldset Styles</h5>
 	  <fieldset class="fieldset">
 	    <legend>Check these out</legend>
 	    <input id="checkbox12" type="checkbox"><label for="checkbox12">1</label>
@@ -782,6 +783,7 @@
 	    
         <div class="grid-x grid-padding-x grid-margin-x"> <!-- NAVIGATION -->
 	  <div class="cell large-6">
+	    <h4 class="subheader"><a href="https://foundation.zurb.com/sites/docs/menu.html">Menu</a></h4>
 	    <ul class="menu">
 	      <li><b><a href="#menu">Menu</a></b></li>
 	      <li><a href="https://foundation.zurb.com/sites/docs/menu.html">One</a></li>
@@ -798,6 +800,7 @@
 	  </div>
 	  
 	  <div id="pagination" class="cell large-6">
+	    <h4 class="subheader"><a href="https://foundation.zurb.com/sites/docs/pagination.html">Pagination</a></h4>
 	    <nav aria-label="Pagination">
 	      <ul class="pagination">
 		<li class="pagination-previous disabled">Previous <span class="show-for-sr">page</span></li>
@@ -925,7 +928,7 @@
 
 	  <div class="cell">
 	    <h4 class="subheader">Different Styles</h4>
-	    <p class="subheader small" style="margin-top: -10px; margin-bottom: 16px;">Disabled buttons are still clickable, not *actually* disabled, just a change in appearance</p>
+	    <p class="subheader small" style="margin-top: -10px; margin-bottom: 16px;">Disabled buttons are still clickable, not *actually* disabled, it's just a change in appearance</p>
 	  </div>
 
 	  <div class="cell large-6">
