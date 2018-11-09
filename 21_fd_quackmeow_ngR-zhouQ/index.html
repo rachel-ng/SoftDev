@@ -99,30 +99,20 @@
 	</div>
 
 	<div class="grid-x grid-padding-x">
+	  <div class="cell large-3"><h5><a href="https://foundation.zurb.com/sites/docs/forms.html">Forms</a></h5>
+          </div>
+	  <div class="cell large-9">
+	    <p>Need I say more?</p>
+	  </div>
+        </div>
+	
+	<div class="grid-x grid-padding-x">
 	  <div class="cell large-3"><h5><a href="https://foundation.zurb.com/sites/docs/menu.html">Navigation</a></h5></div>
 	  <div class="cell large-9">
-	      <p style="margin-top: -16px;"><ul class="simple menu">
-		  <li><b><a href="https://foundation.zurb.com/sites/docs/menu.html">Menu</a></b></li>
-		  <li><a href="#menu">One</a></li>
-		  <li><a href="#menu">Two</a></li>
-		  <li><a href="#menu">Three</a></li>
-		  <li><a href="#menu">Four</a></li>
-		</ul></p>
-	      <p><b><a href="https://foundation.zurb.com/sites/docs/pagination.html">Pagination</a></b>
-		<nav aria-label="Pagination">
-		  <ul class="pagination">
-		    <li class="pagination-previous disabled">Previous <span class="show-for-sr">page</span></li>
-		    <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
-		    <li><a href="#" aria-label="Page 2">2</a></li>
-		    <li><a href="#" aria-label="Page 3">3</a></li>
-		    <li><a href="#" aria-label="Page 4">4</a></li>
-		    <li class="ellipsis" aria-hidden="true"></li>
-		    <li><a href="#" aria-label="Page 12">12</a></li>
-		    <li><a href="#" aria-label="Page 13">13</a></li>
-		    <li class="pagination-next"><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
-		  </ul>
-		</nav>
-	      </p>
+	    <p>
+		<a href="https://foundation.zurb.com/sites/docs/menu.html">Menu</a><br>
+		<a href="https://foundation.zurb.com/sites/docs/pagination.html">Pagination</a>
+	    </p>
 	  </div>
 	</div>
 
@@ -436,19 +426,19 @@
 		      <div class="cell text-center" style="border: 1px solid #666666;">6</div>
 		    </div>
 		  </div>
-		  <div class="cell large-4" style="border: 5px solid #ffe200;">
+		  <div class="cell large-4" style="border: 5px solid #05afb3;">
 		    <div class="grid-y">
 		      <div class="cell text-center" style="border: 1px solid #666666;">4</div>
 		      <div class="cell text-center" style="border: 1px solid #666666;">4</div>
 		    </div>
 		  </div>
-		  <div class="cell large-4" style="border: 5px solid #ffe200;">
+		  <div class="cell large-4" style="border: 5px solid #05afb3;">
 		    <div class="grid-y">
 		      <div class="cell text-center" style="border: 1px solid #666666;">4</div>
 		      <div class="cell text-center" style="border: 1px solid #666666;">4</div>
 		    </div>
 		  </div>
-		  <div class="cell large-4" style="border: 5px solid #ffe200;">
+		  <div class="cell large-4" style="border: 5px solid #05afb3;">
 		    <div class="grid-y">
 		      <div class="cell text-center" style="border: 1px solid #666666;">4</div>
 		      <div class="cell text-center" style="border: 1px solid #666666;">4</div>
@@ -624,6 +614,218 @@
 	    </div>
 	  </div>
 	</div> <!-- CARDS -->
+
+	
+	
+<br><br>
+
+
+	
+	<h4>Forms</h4>
+	<p></p>
+	    
+        <div class="grid-x grid-padding-x grid-margin-x"> <!-- FORMS -->
+	  <div class="cell large-4">
+	    <h5>Text Input</h5>
+	    <form>
+	      <label>Text Input
+		<input type="text" placeholder="input">
+	      </label>
+	    </form>
+	    <pre class="secondary callout small">&lt;form&gt;
+    &lt;label&gt;Text Input
+        &lt;input type="text" placeholder="input"&gt;
+    &lt;/label&gt;
+&lt;/form&gt;</pre>
+	  </div>
+
+	  <div class="cell large-4">
+	    <form><h5>Number Input</h5>
+	      <label>Number Input
+		<input type="number" value="100">
+	      </label>
+	    </form>
+	    <pre class="secondary callout small">&lt;form&gt;
+    &lt;label&gt;Number Input
+        &lt;input type="number" value="100"&gt;
+    &lt;/label&gt;
+&lt;/form&gt;</pre>
+	  </div>
+
+	  <div class="cell large-4">
+	    <h5>Text Area</h5>
+	    <form>
+	      <label>Text Area
+		<textarea placeholder="None"></textarea>
+	      </label>
+	    </form>
+	    <pre class="secondary callout small">&lt;form&gt;
+    &lt;label&gt;Text Area
+        &lt;textarea placeholder="None"&gt;&lt;/textarea&gt;
+    &lt;/label&gt;
+&lt;/form&gt;</pre>
+	  </div>
+
+	  <div class="cell large-6">
+	    <h5>Select Menu + Help Text</h5>
+	    <form>
+	      <label>Select Menu
+		<select>
+		  <option value="pom">pom</option>
+		  <option value="shoob">shoob</option>
+		  <option value="shibe">shibe</option>
+		  <option value="golden boi">golden boi</option>
+		  <option value="corgito">corgito</option>
+		</select>
+	      </label>
+	      <p class="help-text" id="helptext">You can only choose one :(</p>
+	    </form>
+	    <pre class="secondary callout small">&lt;form&gt;
+    &lt;label&gt;Select Menu
+        &lt;select&gt;
+        &lt;option value="one"&gt;one&lt;/option&gt;
+        &lt;option value="two"&gt;two&lt;/option&gt;
+        &lt;option value="three"&gt;three&lt;/option&gt;
+        &lt;option value="four"&gt;four&lt;/option&gt;
+        &lt;option value="five"&gt;five&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/label&gt;
+    &lt;p class="help-text" id="helptext"&gt;Help&lt;/p&gt;
+&lt;/form&gt;</pre>
+	  </div>
+
+	  <div class="cell large-6">
+	    <form><h5>Select Multiple Menu</h5>
+	      <label>Select Multiple Menu<su class="subheader" style="margin-left: 16px;">Use ctrl / command (mac) to select</su>
+		<select multiple>
+		  <option value="pom">pom</option>
+		  <option value="shoob">shoob</option>
+		  <option value="shibe">shibe</option>
+		  <option value="golden boi">golden boi</option>
+		  <option value="corgito">corgito</option>
+		</select>
+	      </label>
+	    </form>
+	    <pre class="secondary callout small">&lt;form&gt;
+    &lt;label&gt;Select Multiple Menu
+        &lt;select multiple&gt;
+        &lt;option value="one"&gt;one&lt;/option&gt;
+        &lt;option value="two"&gt;two&lt;/option&gt;
+        &lt;option value="three"&gt;three&lt;/option&gt;
+        &lt;option value="four"&gt;four&lt;/option&gt;
+        &lt;option value="five"&gt;five&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/label&gt;
+&lt;/form&gt;</pre>
+	  </div>
+
+	  <div class="cell large-6">
+	    <h5>Radio Buttons</h5>
+	    <fieldset class="cell large-6 ">
+	      <legend>Cats or Dogs</legend>
+	      <input type="radio" name="cd" value="cats" id="cats" required><label for="cats">Cats</label>
+	      <input type="radio" name="cd" value="dogs" id="dogs"><label for="dogs">Dogs</label>
+	      <input type="radio" name="cd" value="both" id="both"><label for="both">Both</label>
+	    </fieldset>
+	    <pre class="secondary callout small">&lt;fieldset class="large-6 cell"&gt;
+    &lt;legend&gt;Radio Buttons&lt;/legend&gt;
+    &lt;input type="radio" name="radioone" value="one" id="one" required&gt;&lt;label for="one"&gt;one&lt;/label&gt;
+    &lt;input type="radio" name="radiotwo" value="two" id="two"&gt;&lt;label for="two"&gt;two&lt;/label&gt;
+    &lt;input type="radio" name="radiothree" value="three" id="three"&gt;&lt;label for="onethree"&gt;three&lt;/label&gt;
+&lt;/fieldset&gt;</pre>
+	  </div>
+	  
+	  <div class="cell large-6">
+	    <h5>Checkboxes</h5>
+	    <fieldset class="cell large-6 ">
+	      <legend>Number</legend>
+	      <input id="checkbox1" type="checkbox"><label for="checkbox1">1</label>
+	      <input id="checkbox2" type="checkbox"><label for="checkbox2">2</label>
+	      <input id="checkbox3" type="checkbox"><label for="checkbox3">3</label>
+	    </fieldset>
+	    <pre class="secondary callout small">&lt;fieldset class="large-6 cell"&gt;
+    &lt;legend&gt;Checkboxes&lt;/legend&gt;
+    &lt;input id="checkbox1" type="checkbox"&gt;&lt;label for="checkbox1"&gt;one&lt;/label&gt;
+    &lt;input id="checkbox2" type="checkbox"&gt;&lt;label for="checkbox2"&gt;two&lt;/label&gt;
+    &lt;input id="checkbox3" type="checkbox"&gt;&lt;label for="checkbox3"&gt;three&lt;/label&gt;
+&lt;/fieldset&gt;</pre>
+	  </div>
+	</div>
+
+	<div class="cell large-6">
+	  <h5>Fieldset Styles</h5>
+	  <fieldset class="fieldset">
+	    <legend>Check these out</legend>
+	    <input id="checkbox12" type="checkbox"><label for="checkbox12">1</label>
+	    <input id="checkbox22" type="checkbox"><label for="checkbox22">2</label>
+	    <input id="checkbox32" type="checkbox"><label for="checkbox32">3</label>
+	  </fieldset>
+	  <pre class="secondary callout small">&lt;fieldset class="fieldset"&gt;
+    &lt;legend&gt;Checkboxes&lt;/legend&gt;
+    &lt;input id="checkbox12" type="checkbox"&gt;&lt;label for="checkbox12"&gt;one&lt;/label&gt;
+    &lt;input id="checkbox22" type="checkbox"&gt;&lt;label for="checkbox22"&gt;two&lt;/label&gt;
+    &lt;input id="checkbox32" type="checkbox"&gt;&lt;label for="checkbox32"&gt;three&lt;/label&gt;
+&lt;/fieldset&gt;</pre>
+	</div>
+		
+	  </div>
+	</div> <!-- FORMS -->
+
+
+	
+<br><br>
+
+
+	
+	<h4>Navigation</h4>
+	<p></p>
+	    
+        <div class="grid-x grid-padding-x grid-margin-x"> <!-- NAVIGATION -->
+	  <div class="cell large-6">
+	    <ul class="menu">
+	      <li><b><a href="#menu">Menu</a></b></li>
+	      <li><a href="https://foundation.zurb.com/sites/docs/menu.html">One</a></li>
+	      <li><a href="https://foundation.zurb.com/sites/docs/menu.html">Two</a></li>
+	      <li><a href="https://foundation.zurb.com/sites/docs/menu.html">Three</a></li>
+	      <li><a href="https://foundation.zurb.com/sites/docs/menu.html">Four</a></li>
+	    </ul>
+	    <pre class="secondary callout small">&lt;ul class="menu"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;One&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Two&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Three&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Four&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+	  </div>
+	  
+	  <div id="pagination" class="cell large-6">
+	    <nav aria-label="Pagination">
+	      <ul class="pagination">
+		<li class="pagination-previous disabled">Previous <span class="show-for-sr">page</span></li>
+		<li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+		<li><a href="#pagination" aria-label="Page 2">2</a></li>
+		<li><a href="#pagination" aria-label="Page 3">3</a></li>
+		<li><a href="#pagination" aria-label="Page 4">4</a></li>
+		<li class="ellipsis" aria-hidden="true"></li>
+		<li><a href="#pagination" aria-label="Page 12">12</a></li>
+		<li><a href="#pagination" aria-label="Page 13">13</a></li>
+		<li class="pagination-next"><a href="#pagination" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+	      </ul>
+	    </nav>
+	    <pre class="secondary callout small">&lt;nav aria-label="Pagination"&gt;
+    &lt;ul class="pagination"&gt;
+        &lt;li class="pagination-previous disabled"&gt;Previous &lt;span class="show-for-sr"&gt;page&lt;/span&gt;&lt;/li&gt;
+        &lt;li class="current"&gt;&lt;span class="show-for-sr"&gt;You're on page&lt;/span&gt; 1&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" aria-label="Page 2"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" aria-label="Page 3"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" aria-label="Page 4"&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="ellipsis" aria-hidden="true"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" aria-label="Page 12"&gt;12&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" aria-label="Page 13"&gt;13&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="pagination-next"&gt;&lt;a href="#" aria-label="Next page"&gt;Next &lt;span class="show-for-sr"&gt;page&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+	  </div>
+	</div> <!-- NAVIGATION -->
 
 
 	
@@ -827,12 +1029,17 @@
 	    <br><br>
 	    <pre class="secondary callout small">&lt;span class="label secondary | success | alert | warning"&gt;Label&lt;/span&gt;</pre>
 	  </div>
-	</div> <!-- LABELS -->
+	</div> <!-- LABELS -->	
 
+
+	
+<br><br>
+
+	
 
 	  </div> <!-- INTERESTING FEATURES -->
 
-    </div></div> 
+    </div>
 
 
     
