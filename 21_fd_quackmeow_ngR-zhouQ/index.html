@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en" >
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Foundation 5</title>
+  
   <!-- app.css override -->
-  <!-- <link rel="stylesheet" href="css/app.css"> -->
+  <link rel="stylesheet" href="app.css">
+  
   <!--CDN-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/css/foundation.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/js/foundation.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/js/vendor/jquery.min.js"></script>
 
+  <style type="text/css">
+
+    .small {
+    font-size: .75em;
+    }
+    
+  </style>
+  
 </head>
 <body>
   
@@ -106,7 +115,6 @@
 	<p>This is a super basic template that uses <a href="#cdn">CDN</a>.</p>
 	<p>If you have custom CSS or JS, you can store it in <code>app.css</code> in its respective folder</p>
 
-	<!-- &lt; = <, &gt; = > -->
 <div class="cell large-6 secondary callout"><pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -158,15 +166,17 @@
       <div class="cell">
 	<h3 id="interesting"><a href="#interesting">Interesting Features</a></h3><br>
 
-	<h4>XY Grid</h4>
+
+	
+	<h4>XY Grid</h4> <!-- XY GRID -->
 	<p>Some styling has been added so you can see the grid</p>
 	
 	<div class="grid-x grid-padding-x grid-margin-x">
 
-	  <div class="cell">
+	  <div class="cell"> <!-- GRID-X -->
 	    <div class="grid-x grid-padding-x grid-margin-x">
 	      <div class="cell large-6">
-		<pre class="secondary callout" style="font-size:.75em;">&lt;div class="grid-x"&gt;
+		<pre class="secondary callout small">&lt;div class="grid-x"&gt;
     &lt;div class="cell"&gt;text here&lt;/div&gt;
     &lt;div class="cell large-6"&gt;text here&lt;/div&gt;
     &lt;div class="cell large-3"&gt;text here&lt;/div&gt;
@@ -182,12 +192,12 @@
 		</div>
 	      </div>
 	    </div>
-	  </div>
+	  </div> <!-- GRID-X -->
 
-	  <div class="cell">
+	  <div class="cell"> <!-- GRID-X GRID-PADDING-X -->
 	    <div class="grid-x grid-padding-x grid-margin-x">
 	      <div class="cell large-6">
-		<pre class="secondary callout" style="font-size:.75em;">&lt;div class="grid-x grid-padding-x"&gt;
+		<pre class="secondary callout small">&lt;div class="grid-x grid-padding-x"&gt;
     &lt;div class="cell"&gt;text here&lt;/div&gt;
     &lt;div class="cell large-6"&gt;text here&lt;/div&gt;
     &lt;div class="cell large-3"&gt;text here&lt;/div&gt;
@@ -203,12 +213,12 @@
 		</div>
 	      </div>
 	    </div>
-	  </div>
+	  </div> <!-- GRID-X GRID-PADDING-X -->
 
-	  <div class="cell">
+	  <div class="cell"> <!-- GRID-X GRID-PADDING-X GRID-MARGIN-X -->
 	    <div class="grid-x grid-padding-x grid-margin-x">
 	      <div class="cell large-6">
-		<pre class="secondary callout" style="font-size:.75em;">&lt;div class="grid-x grid-padding-x grid-margin-x"&gt;
+		<pre class="secondary callout small">&lt;div class="grid-x grid-padding-x grid-margin-x"&gt;
     &lt;div class="cell"&gt;text here&lt;/div&gt;
     &lt;div class="cell large-6"&gt;text here&lt;/div&gt;
     &lt;div class="cell large-3"&gt;text here&lt;/div&gt;
@@ -224,12 +234,12 @@
 		</div>
 	      </div>
 	    </div>
-	  </div>
+	  </div> <!-- GRID-X GRID-PADDING-X GRID-MARGIN-X -->
 
-	  <div class="cell">
+	  <div class="cell"> <!-- GRID-Y -->
 	    <div class="grid-x grid-padding-x grid-margin-x">
 	      <div class="cell large-6">
-		<pre class="secondary callout" style="font-size:.75em;">&lt;div class="grid-y"&gt;
+		<pre class="secondary callout small">&lt;div class="grid-y"&gt;
     &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
     &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
     &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
@@ -247,12 +257,12 @@
 		</div>
 	      </div>
 	    </div>
-	  </div>
+	  </div> <!-- GRID-Y -->
 	  
-	  <div class="cell">
+	  <div class="cell"> <!-- GRID-Y GRID-PADDING-Y -->
 	    <div class="grid-x grid-padding-x grid-margin-x">
 	      <div class="cell large-6">
-		<pre class="secondary callout" style="font-size:.75em;">&lt;div class="grid-y grid-padding-y"&gt;
+		<pre class="secondary callout small">&lt;div class="grid-y grid-padding-y"&gt;
     &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
     &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
     &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
@@ -270,14 +280,14 @@
 		</div>
 	      </div>
 	    </div>
-	  </div>
+	  </div> <!-- GRID-Y GRID-PADDING-Y -->
 
-	  <div class="cell">
+	  <div class="cell"> <!-- GRID-Y GRID-PADDING-Y GRID-MARGIN-Y -->
 	    <div class="grid-x grid-padding-x grid-margin-x">
 	      <div class="cell large-6">
 		<div class="grid-y grid-padding-y grid-margin-y">
 		  <div class="cell">
-		    <pre class="secondary callout" style="font-size:.75em;">&lt;div class="grid-y grid-padding-y grid-margin-y"&gt;
+		    <pre class="secondary callout small">&lt;div class="grid-y grid-padding-y grid-margin-y"&gt;
     &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
     &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
     &lt;div class="cell text-center"&gt;text here&lt;/div&gt;
@@ -297,9 +307,9 @@
 		</div>
 	      </div>
 	    </div>
-	  </div>
+	  </div> <!-- GRID-Y GRID-PADDING-Y GRID-MARGIN-Y -->
 	  
-	</div>
+	</div> <!-- XY GRID -->
 
 
 	
@@ -311,17 +321,17 @@
 	  <div class="cell large-6"> <!-- CALLOUT CODE -->
 	    <div class="grid-y grid-padding-y">
 	      <div class="cell">
-		<pre class="secondary callout" style="font-size:.75em;">&lt;div class="cell large callout text-center"&gt;text here&lt;/div&gt;</pre>
+		<pre class="secondary callout small">&lt;div class="cell large callout text-center"&gt;text here&lt;/div&gt;</pre>
 	      </div>
 
 	      <div class="cell">
-		<pre class="secondary callout" style="font-size:.75em;">
+		<pre class="secondary callout small">
 &lt;div class="cell large-6 primary callout text-center"&gt;text here&lt;/div&gt;
 &lt;div class="cell large-6 secondary callout text-center"&gt;text here&lt;/div&gt;</pre>
 	      </div>
 	      
 	      <div class="cell">
-		<pre class="secondary callout" style="font-size:.75em;">
+		<pre class="secondary callout small">
 &lt;div class="cell large-4 small success callout text-center"&gt;text here&lt;/div&gt;
 &lt;div class="cell large-4 small alert callout text-center"&gt;text here&lt;/div&gt;
 &lt;div class="cell large-4 small warning callout text-center"&gt;text here&lt;/div&gt;</pre>
@@ -351,9 +361,9 @@
         <div class="grid-x grid-padding-x grid-margin-x">
 
 	  <div class="cell large-6"> <!-- CODE FOR IMG W/O CARD-SECTION -->
-	    <pre class="secondary callout" style="font-size:.75em;">&lt;div class="cell large-x"&gt;
+	    <pre class="secondary callout small">&lt;div class="cell large-x"&gt;
     &lt;div class="card"&gt;
-        &lt;img src="https://media.giphy.com/media/26xBK9cIkUSQ104k8/giphy.gif"&gt;
+        &lt;img src="img_src.jpg"&gt;
         &lt;div class="card-section"&gt;text here&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
@@ -361,7 +371,7 @@
 	  
   	  <div class="cell large-3">
 	    <div class="card">
-	      <img src="https://media.giphy.com/media/26xBK9cIkUSQ104k8/giphy.gif">
+	      <img src="1.gif">
 	      <div class="card-section">
 		<p>this is a card</p>
 	      </div>
@@ -373,15 +383,15 @@
 	      <div class="card-section">
 		<p>the text is in a card section</p>
 	      </div>
-	      <img src="https://media.giphy.com/media/3oz8xCX30CNCJZigSc/giphy.gif">
+	      <img src="2.gif">
 	    </div>
 	  </div>
 
 	  <div class="cell large-6"> <!-- CODE FOR IMG W/ CARD-SECTION -->
-	    <pre class="secondary callout" style="font-size:.75em;">&lt;div class="cell large-x"&gt;
+	    <pre class="secondary callout small">&lt;div class="cell large-x"&gt;
     &lt;div class="card"&gt;
         &lt;div class="card-section"&gt;
-	    &lt;img src="https://media.giphy.com/media/26xBK9cIkUSQ104k8/giphy.gif"&gt;
+	    &lt;img src="img_src.jpg"&gt;
         &lt;/div&gt;
         &lt;div class="card-section"&gt;text here&lt;/div&gt;
     &lt;/div&gt;
@@ -391,7 +401,7 @@
 	  <div class="cell large-3">
 	    <div class="card">
 	      <div class="card-section">
-		<img src="https://media.giphy.com/media/l3q2Okm6SwPwXZqp2/giphy.gif">
+		<img src="3.gif">
 	      </div>
 	      <div class="card-section">
 		<p>now the image is also in a card section</p>
@@ -405,7 +415,7 @@
 		<p>you can also put images below the content</p>
 	      </div>
 	      <div class="card-section">
-		<img src="https://media.giphy.com/media/26xBy4g1eHS1vqZRS/giphy.gif">
+		<img src="4.gif">
 	      </div>
 	    </div>
 	  </div>
