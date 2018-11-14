@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>{{title}}</title>
+
+  </head>
+
+  <body>
+
+    <h1>{{title}}</h1>
+    
+    {% if media_type == "video" %}
+    <embed src="{{url}}">
+    {% endif %}
+    {% if media_type == "image" %}
+    <img src="{{url}}">
+    {% endif %}
+	  
+    <p>{{explanation}}</p>
+  </body>
+
+  
+</html>
