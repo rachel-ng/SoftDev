@@ -1,53 +1,62 @@
 import json, urllib
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, flash
 app = Flask(__name__)  # create instance of class Flask
-
+app.secret_key = "asdfadsfjskdfjqweruioqwerjlkasdjfl;asdjfadlksfkjlfdsjkldfsjkl"
 
 URL_STUB = "https://archive.org/wayback/available?"
 URL_QUERY = "url="
-site = "https://archive.org/help/wayback_api.php"
 
-URL = URL_STUB + URL_QUERY + site
-print(URL)
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def root():
+    site = "https://www.google.com"
+    trigger = False
+    
+    if (request.form.get('site') != None):
+        site = request.form.get('site')
+        trigger = True
+
+    URL = URL_STUB + URL_QUERY + site
+        
     response = urllib.request.urlopen(URL)
     archived = json.loads(response.read())['archived_snapshots']
+
     if archived:
         d = archived['closest']
     else:
-        d = {"available": "", "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "timestamp": "YYYYMMDDhhmmss", "status": "400"}
-
+        d = {"available": False, "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "timestamp": "YYYYMMDDhhmmss", "status": "400"}
+        
     print(list(d.keys()))
     print(d)
 
+    flash("<a href=d['url']>The Site at d['timestamp']</a>")
     return render_template("base.html",
-                           title = "Wayback Machine",
+                           title = "The Wayback Machine",
+                           available = trigger,
                            url = d['url'],
                            timestamp = d['timestamp'])
+    
+#@app.route("/<time>")
+#def root_time(time):
+#    print(time)
+#
+#    URL = URL_STUB + URL_QUERY + site
 
+#    response = urllib.request.urlopen(URL + "&timestamp=" + time)
+#    archived = json.loads(response.read())['archived_snapshots']
+#    if archived:
+#        d = archived['closest']
+#    else:
+#        d = {"available": "", "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "timestamp": "YYYYMMDDhhmmss", "status": "400"}
 
-
-
-@app.route("/<time>")
-def root_url(time):
-    print(time)
-    response = urllib.request.urlopen(URL + "&timestamp=" + time)
-    archived = json.loads(response.read())['archived_snapshots']
-    if archived:
-        d = archived['closest']
-    else:
-        d = {"available": "", "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "timestamp": "YYYYMMDDhhmmss", "status": "400"}
-
-    print(list(d.keys()))
-    print(d)
-
-    return render_template("base.html",
-                           title = "Wayback Machine",
-                           url = d['url'],
-                           timestamp = d['timestamp'])
+#    print(list(d.keys()))
+#    print(d)
+#
+#    return render_template("base.html",
+#                           title = "Wayback Machine",
+#                           url = d['url'],
+#                           timestamp = d['timestamp'])
 
 if __name__ == "__main__":
     app.debug = True
