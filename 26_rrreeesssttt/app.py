@@ -8,38 +8,32 @@ CAT_FACTS = "https://catfact.ninja/fact"
 
 RANDOM_CAT = "https://aws.random.cat/meow"
 
+ADVICE_SLIP = "https://api.adviceslip.com/advice"
+
 @app.route("/")
 def root():
     cf = json.loads(urllib.request.urlopen(CAT_FACTS).read())
     rc = json.loads(urllib.request.urlopen(RANDOM_CAT).read())
+    ad = json.loads(urllib.request.urlopen(ADVICE_SLIP).read())
+
     
     print(list(cf.keys()))
     print(cf)
 
     print(list(rc.keys()))
     print(rc)
+    
+    print(list(ad.keys()))
+    print(ad)
+
 
     return render_template("base.html",
                            title = "Cats!",
                            img_src = rc['file'],
-                           fact = cf['fact'])
+                           fact = cf['fact'],
+                           advice = ad['slip']['advice'])
 
 
-@app.route("/<date>")
-def root_date(date):
-    response = urllib.request.urlopen(apikey + "&date=" + date)
-    d = json.loads(response.read())
-
-    print(list(d.keys()))
-    print(d)
-
-    return render_template("base.html",
-                           title = d['title'],
-                           media_type = d['media_type'],
-                           url = d['url'],
-                           explanation = d['explanation'])
-
-    
 if __name__ == "__main__":
     app.debug = True
     app.run()
