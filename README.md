@@ -15,7 +15,7 @@
 [flask 1.0 docs](http://flask.pocoo.org/docs/1.0/)  
 &nbsp;&nbsp;&nbsp;&nbsp;[quickstart](http://flask.pocoo.org/docs/1.0/quickstart/)  
 [mdn css](https://developer.mozilla.org/en-US/docs/Web/CSS)  
-&nbsp;&nbsp;&nbsp;&nbsp;[reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+&nbsp;&nbsp;&nbsp;&nbsp;[reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)  
 [api knowledge base](https://drive.google.com/drive/u/1/folders/0B9IBLjv6_7y6eExpYkdGNmRpZ3c)
 
 copypasta for the folders (if you're lazy)
