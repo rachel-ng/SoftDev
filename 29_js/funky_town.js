@@ -44,6 +44,7 @@ var fib_button = document.getElementById("fib_button");
 var gcd_button = document.getElementById("gcd_button");
 var rand_button = document.getElementById("rand_button");
 
-fib_button.addEventListener("click", fibonacci);
+fib_button.addEventListener("click",
+			    function(e) { console.log(e); console.log(e.clientX) });
 gcd_button.addEventListener("click", gcd);
 rand_button.addEventListener("click", randomStudent);
