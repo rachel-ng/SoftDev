@@ -1,8 +1,3 @@
-// team Cygnus... Vismund Cygnus
-// SoftDev pd7
-// K29 -- sequential progression progression
-// 2018-12-20
-
 var fib_output = document.getElementById("fib_output");
 var gcd_output = document.getElementById("gcd_output");
 var rand_output = document.getElementById("rand_output");
