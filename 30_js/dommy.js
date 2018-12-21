@@ -38,12 +38,15 @@ the_button.addEventListener("click",titlelist);
 
 
 
+var og = title.innerHTML
+
 var titlechange = (newt) => {
   title.innerHTML = newt;
 }
 
 var addlistener = (itname) => {
   var newtitle = itname.innerHTML;
+  itname.addEventListener("mouseout",function(){titlechange(og)});
   itname.addEventListener("mouseover",function(){titlechange(newtitle)});
   itname.addEventListener("click",function(){itname.remove()});
   console.log(itname.innerHTML);
@@ -55,7 +58,3 @@ console.log(itemsinlist);
 for (var i = 0; i < itemsinlist.length; i++) {
   addlistener(itemsinlist[i]);
 }
-
-var og = title.innerHTML
-
-title.addEventListener("mouseover",function(){titlechange(og)});
